@@ -1,27 +1,21 @@
+/* Escreva um programa em C que leia três números inteiros do usuário. Calcule a média desses
+números usando a soma e a divisão. Em seguida, subtraia o menor número da média e multiplique o
+resultado pelo maior número. Imprima o resultado final. */
+
 #include <stdio.h>
 
 int main() {
-    int num1, num2, num3;
-    int menor, maior;
-    float media, resultado;
+    int a = 1; // Declaração e inicialização da variável 'a' com o valor 1
+    int b = 3; // Declaração e inicialização da variável 'b' com o valor 3
+    int c = 5; // Declaração e inicialização da variável 'c' com o valor 5
     
-    printf("Digite o primeiro número: ");
-    scanf("%d", &num1);
+    int soma = a + b + c; // Cálculo da soma das variáveis 'a', 'b' e 'c'
+    int divisao = soma / 3; // Cálculo da divisão da soma por 3
     
-    printf("Digite o segundo número: ");
-    scanf("%d", &num2);
+    int soma_menor = divisao - a; // Cálculo da diferença entre a divisão e o valor de 'a'
+    int multiplica_maior = soma_menor * c; // Cálculo da multiplicação entre 'soma_menor' e 'c'
     
-    printf("Digite o terceiro número: ");
-    scanf("%d", &num3);
-    
-    media = (num1 + num2 + num3) / 3.0;
-    
-    menor = (num1 < num2) ? ((num1 < num3) ? num1 : num3) : ((num2 < num3) ? num2 : num3);
-    maior = (num1 > num2) ? ((num1 > num3) ? num1 : num3) : ((num2 > num3) ? num2 : num3);
-    
-    resultado = (media - menor) * maior;
-    
-    printf("Resultado final: %.2f\n", resultado);
+    printf("A média subtraída pelo menor termo multiplicado pelo maior termo é: %d", multiplica_maior); // Impressão do resultado
     
     return 0;
 }

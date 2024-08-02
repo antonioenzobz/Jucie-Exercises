@@ -1,25 +1,21 @@
+/* Escreva um programa em C que leia dois números inteiros do usuário e calcule a soma, subtração,
+multiplicação, divisão e o módulo desses números. Imprima os resultados na tela.*/
+
+
 #include <stdio.h>
 
 int main() {
-    int num1, num2;
+    int a = 1; // Declaração e inicialização da variável 'a' com o valor 1
+    int b = 3; // Declaração e inicialização da variável 'b' com o valor 3
+    int c = 5; // Declaração e inicialização da variável 'c' com o valor 5
     
-    printf("Digite o primeiro número: ");
-    scanf("%d", &num1);
+    int soma = a + b + c; // Cálculo da soma das variáveis 'a', 'b' e 'c'
+    int divisao = soma / 3; // Cálculo da divisão da soma por 3
     
-    printf("Digite o segundo número: ");
-    scanf("%d", &num2);
+    int soma_menor = divisao - a; // Cálculo da diferença entre a divisão e o valor de 'a'a);
+    int multiplica_maior = soma_menor * c; // Cálculo da multiplicação entre 'soma_menor' e 'c'
     
-    printf("Soma: %d\n", num1 + num2);
-    printf("Subtração: %d\n", num1 - num2);
-    printf("Multiplicação: %d\n", num1 * num2);
-    
-    if (num2 != 0) {
-        printf("Divisão: %d\n", num1 / num2);
-    } else {
-        printf("Divisão: divisão por zero não é permitida.\n");
-    }
-    
-    printf("Módulo: %d\n", num1 % num2);
+    printf("A média %d subtraida pelo menor termo multplicado pelo maior termo é: %d", multiplica_maior);
 
     return 0;
 }
